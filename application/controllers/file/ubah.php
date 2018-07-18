@@ -16,13 +16,23 @@ class ubah extends CI_Controller
 
 	function id($id)
 	{
-        $data['file'] = $this->file->pilih($id);
-		$this->load->view('file/ubah',$data);
+		if(!$id)
+        	{
+            		$notif = array('id' => 'id',
+                           		'pesan' => 'Pilih data yang akan diubah.');
+            		$this->session->set_flashdata($notif);
+            		redirect(base_url("index.php/file/tampil"));
+        	}
+        	else
+        	{
+	        	$data['file'] = $this->file->pilih($id);
+			$this->load->view('file/ubah',$data);
+		}
 	}
 
 	function validasi()
-    {
-        $data = array(
+    	{
+        	$data = array(
                     array('field' => 'nama',
                           'rules' => 'required|max_length[40]',
                           'errors' => 
