@@ -16,8 +16,18 @@ class ubah extends CI_Controller
 
 	function id($id)
 	{
-        $data['tanggal'] = $this->tanggal->pilih($id);
-		$this->load->view('tanggal/ubah',$data);
+        if(!$id)
+        {
+            $notif = array('id' => 'id',
+                           'pesan' => 'Pilih data yang akan diubah.');
+            $this->session->set_flashdata($notif);
+            redirect(base_url("index.php/tanggal/tampil"));
+        }
+        else
+        {
+            $data['tanggal'] = $this->tanggal->pilih($id);
+    		$this->load->view('tanggal/ubah',$data);
+        }
 	}
 
 	function tgl_indo($tanggal, $cetak_hari = false)
