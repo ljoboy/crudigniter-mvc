@@ -16,8 +16,18 @@ class ubah extends CI_Controller
 
 	function id($id)
 	{
-        $data['news'] = $this->artikel->pilih($id);
-		$this->load->view('artikel/ubah',$data);
+		if(!$id)
+		{
+			$notif = array('id' => 'gagal',
+				       'pesan' => 'Gagal Mengunggah Gambar.');
+			$this->session->set_flashdata($notif);
+			redirect(base_url("index.php/artikel/tampil"));
+		}
+		else
+		{
+        		$data['news'] = $this->artikel->pilih($id);
+			$this->load->view('artikel/ubah',$data);
+		}
 	}
 
 	function validasi()
