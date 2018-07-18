@@ -31,10 +31,9 @@ class tambah extends CI_Controller
                                 'max_length' => 'Karakter ID maksimal 7.'),
                     ),
                     array('field' => 'nama',
-                          'rules' => 'required|alpha|min_length[2]|max_length[40]',
+                          'rules' => 'required|min_length[2]|max_length[40]',
                           'errors' => 
                           array('required' => 'Nama wajib diisi.',
-                          		'alpha' => 'Nama harus berupa huruf.',
                                 'min_length' => 'Karakter nama minimal 2.',
                                 'max_length' => 'Karakter nama maksimal 40.'),
                     ),
