@@ -10,9 +10,8 @@ class Migration_file extends CI_migration
 			$this->dbforge->add_field(
 				array(
 					'id' => array(
-						'type' => 'VARCHAR',
+						'type' => 'INT',
 						'constraint' => 4,
-						'unsigned' => true,
 						'null' => false,
 						'auto_increment' => true),
 					'nama' => array(

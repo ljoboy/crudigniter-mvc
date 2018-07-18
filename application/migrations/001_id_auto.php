@@ -12,7 +12,6 @@ class Migration_id_auto extends CI_migration
 					'id' => array(
 						'type' => 'VARCHAR',
 						'constraint' => 7,
-						'unsigned' => true,
 						'null' => false),
 					'nama' => array(
 						'type' => 'VARCHAR',

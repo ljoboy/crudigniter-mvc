@@ -10,12 +10,11 @@ class Migration_tanggal extends CI_migration
 			$this->dbforge->add_field(
 				array(
 					'id' => array(
-						'type' => 'VARCHAR',
+						'type' => 'INT',
 						'constraint' => 4,
-						'unsigned' => true,
 						'null' => false,
 						'auto_increment' => true),
-					'tanggal_lahir' => array(
+					'tgl_lahir' => array(
 						'type' => 'VARCHAR',
 						'constraint' => 10,
 						'null' => false),

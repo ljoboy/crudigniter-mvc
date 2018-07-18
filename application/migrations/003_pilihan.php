@@ -10,16 +10,15 @@ class Migration_pilihan extends CI_migration
 			$this->dbforge->add_field(
 				array(
 					'id' => array(
-						'type' => 'VARCHAR',
+						'type' => 'INT',
 						'constraint' => 4,
-						'unsigned' => true,
 						'null' => false,
 						'auto_increment' => true),
 					'jenis_kelamin' => array(
 						'type' => 'ENUM("perempuan","laki-laki")',
 						'null' => false),
 					'hobi' => array(
-						'type' => 'ENUM("membaca","menulis","melukis","menyanyi")',
+						'type' => 'SET("membaca","menulis","melukis","menyanyi")',
 						'null' => false)
 				)
 			);
