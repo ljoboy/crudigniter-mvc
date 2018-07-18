@@ -16,8 +16,18 @@ class ubah extends CI_Controller
 
     function id($id)
     {
-        $data['other'] = $this->other->pilih($id);
-        $this->load->view('other/ubah',$data);
+        if(!$id)
+        {
+            $notif = array('id' => 'id',
+                           'pesan' => 'Pilih data yang akan diubah.');
+            $this->session->set_flashdata($notif);
+            redirect(base_url("index.php/other/tampil"));
+        }
+        else
+        {
+            $data['other'] = $this->other->pilih($id);
+            $this->load->view('other/ubah',$data);
+        }
     }
 
     function validasi()
