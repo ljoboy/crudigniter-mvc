@@ -11,13 +11,18 @@ class migrasi extends CI_controller
 
 	public function index()
 	{
-		if(!$this->migration->current())
+		for($v = 1; $v < 8; $v++)
 		{
-			show_error($this->migration->error_string());
-		}
-		else
-		{
-			echo 'Migration OK!';
+			if(!$this->migration->version($v))
+			{
+				echo 'Migration version '.$v.' ERROR!';
+				show_error($this->migration->error_string());
+			}
+			else
+			{
+				echo 'Migration version '.$v.' OK!';
+				echo '<br>';
+			}
 		}
 	}
 }
