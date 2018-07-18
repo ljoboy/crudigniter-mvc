@@ -3,8 +3,8 @@ CRUD menggunakan CodeIgniter MVC
 
 Spesifikasi
 --------------------------------
-* Framework : CodeIgniter 3.1.9 https://codeigniter.com/
-* Template : Start Bootstrap - SB Admin https://startbootstrap.com/template-overviews/sb-admin/
+* Framework : CodeIgniter 3.1.9 (https://codeigniter.com/)
+* Template : Start Bootstrap - SB Admin (https://startbootstrap.com/template-overviews/sb-admin/)
 * Database : MySQL
 * Plugin :
 	- Bootstrap TagsInput 0.7.1 by Tim Schlechter
