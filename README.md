@@ -18,15 +18,12 @@ Spesifikasi
 Screen Captures
 --------------------------------
 Dashboard
-
 ![alt text](screencapture-crud-dashboard.png "Dashboard")
 
 
 List File
-
 ![alt text](screencapture-crud-file-tampil.png "List File")
 
 
 Tambah Data Gambar
-
 ![alt text](screencapture-crud-gambar-tambah.png "Tambah Data Gambar")
