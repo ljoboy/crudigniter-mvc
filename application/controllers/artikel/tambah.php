@@ -175,7 +175,7 @@ class tambah extends CI_Controller
 			{
 				$data = array('judul' => strtolower($post_judul),
 							  'tgl_post' => date('Y-m-d H:i:s'),
-							  'gambar' => "default.jpg",
+							  'gambar' => "default.png",
 							  'isi' => $post_isi,
 							  'tag' => strtolower($post_tag));
 				$tambah = $this->artikel->tambah($data);

@@ -38,7 +38,7 @@ class hapus extends CI_Controller
 				$hapus = $this->artikel->hapus($id);
 				if($hapus)
 				{
-					if($src == 'default.jpg')
+					if($src == 'default.png')
 					{
 						$notif = array('id' => 'berhasil',
 									   'pesan' => 'Berhasil Menghapus Data.');
