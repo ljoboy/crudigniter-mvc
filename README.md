@@ -19,12 +19,14 @@ Screen Captures
 --------------------------------
 Dashboard
 
-<img src="https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-dashboard.png">
+![alt text](screenshots/screencapture-crud-dashboard.png "Dashboard")
+
 
 List File
 
-<img src="https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-file-tampil.png">
+https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-file-tampil.png
+
 
 Tambah Data Gambar
 
-<img src="https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-gambar-tambah.png">
+https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-gambar-tambah.png
