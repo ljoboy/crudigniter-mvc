@@ -38,7 +38,8 @@ class artikel extends CI_Model
 
 	function tampil_limit()
 	{
-		$this->db->limit(10);
+		$this->db->limit(4);
+		$this->db->order_by('tgl_post','DESC');
 		$kueri = $this->db->get($this->tabel);
 		if($kueri->num_rows() > 0)
 		{
