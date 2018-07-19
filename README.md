@@ -13,3 +13,18 @@ Spesifikasi
 	- Font Awesome 4.7.0 by @davegandy (http://fontawesome.io)
 	- Jquery Easing 1.4.1 (http://gsgd.co.uk/sandbox/jquery/easing/)
 	- Select2 Bootstrap Theme 0.1.0-beta.10 (https://select2.github.io/select2-bootstrap-theme)
+	
+
+Screen Captures
+--------------------------------
+Dashboard
+
+<img src="https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-dashboard.png">
+
+List File
+
+<img src="https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-file-tampil.png">
+
+Tambah Data Gambar
+
+<img src="https://raw.githubusercontent.com/NomerSekawan/crudigniter-mvc/screencapture-crud-gambar-tambah.png">
