@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $tambah = $this->session->flashdata('url_tambah');
 $ubah = $this->session->flashdata('url_ubah');
 $hapus = $this->session->flashdata('url_hapus');
-include 'tglIndo.php';
+include '/../tglIndo.php';
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ include 'tglIndo.php';
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-sm table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-sm table-bordered table-hover" id="tanggal" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>#</th>

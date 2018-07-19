@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $tampil = $this->session->flashdata('url_tampil');
 $ubah = $this->session->flashdata('url_ubah');
 $hapus = $this->session->flashdata('url_hapus');
-include 'lalu.php';
+include '/../lalu.php';
 ?>
 
 <!DOCTYPE html>

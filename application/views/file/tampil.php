@@ -18,6 +18,15 @@ $hapus = $this->session->flashdata('url_hapus');
     <?php include '/../assetCss.php';?>
 </head>
 
+<style type="text/css">
+.item-danger.active,
+.item-danger:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #DC3545;
+}
+</style>
+
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <div class="notif"></div>
     <!-- Navigation-->
@@ -38,7 +47,7 @@ $hapus = $this->session->flashdata('url_hapus');
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-sm table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-sm table-bordered table-hover" id="file" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -59,15 +68,28 @@ $hapus = $this->session->flashdata('url_hapus');
                                         ?>
                                 <tr>
                                     <td><?php echo $no ?></td>
-                                    <td>
-                                        <a href="<?php echo site_url('./data/file/'.$er['source'])?>">
-                                            <?php echo ucwords($er['nama'])?>
-                                        </a>
-                                    </td>
+                                    <td><?php echo ucwords($er['nama'])?></td>
                                     <td><?php echo $er['ukuran']?> kb</td>
                                     <td><?php echo $er['tipe']?></td>
                                     <td class="text-right">
-                                        <button class="btn btn-danger btn-sm hapus" data-toggle="modal" data-target="#konfirm" data-id="<?php echo $er['id']?>" data-nama="<?php echo ucwords($er['nama'])?>" data-src="<?php echo $er['source']?>">
+                                        <button class="btn btn-primary btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            <i class="fa fa-fw fa-ellipsis-v"></i>
+                                        </button>
+                                            <ul class="dropdown-menu pull-right text-right">
+                                                <li class="dropdown-item">
+                                                    <a href="<?php echo $unduh.$er['source']?>">Unduh</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="<?php echo $ubah.$er['id']?>">Ubah</a>
+                                                </li>
+                                                <li class="dropdown-item item-danger hapus" data-target="#konfirm" data-toggle="modal" data-id="<?php echo $er['id']?>" data-nama="<?php echo ucwords($er['nama'])?>" data-src="<?php echo $er['source']?>">
+                                                    <a href="#konfirm" class="text-danger">Hapus</a>
+                                                </li>
+                                            </ul>
+
+
+
+                                        <!-- <button class="btn btn-danger btn-sm hapus" data-toggle="modal" data-target="#konfirm" data-id="<?php echo $er['id']?>" data-nama="<?php echo ucwords($er['nama'])?>" data-src="<?php echo $er['source']?>">
                                             <i class="fa fa-fw fa-trash"></i>
                                             <span class="d-xl-inline d-lg-inline d-none">Hapus</span>
                                         </button>
@@ -78,7 +100,7 @@ $hapus = $this->session->flashdata('url_hapus');
                                         <button class="btn btn-primary btn-sm" onclick="window.location='<?php echo $unduh.$er['source']?>';">
                                             <i class="fa fa-fw fa-download"></i>
                                             <span class="d-xl-inline d-lg-inline d-none">Unduh</span>
-                                        </button>
+                                        </button> -->
                                     </td>
                                 </tr>
                                         <?php

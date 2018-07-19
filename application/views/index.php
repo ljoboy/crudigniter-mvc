@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 include 'limitString.php';
+include 'tglIndo.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,71 +15,6 @@ include 'limitString.php';
     <title>CRUD - MVC</title>
     <?php include 'assetCss.php';?>
 </head>
-
-<style>
-.carousel-control-prev,
-.carousel-control-next
-{
-    height: 2em;
-    width: 2em;
-    background: none repeat scroll 0 0 #428bca;
-    border-radius: 50%;
-    margin-top: 6.4em;
-}
-
-.carousel-control-prev
-{
-    left: -1.3em;
-    padding: 0 4px 0 0;
-}
-
-.carousel-control-next
-{
-    right: -1.3em;
-    padding: 0 0 0 4px;
-}
-
-.carousel-indicators
-{
-    cursor: pointer;
-}
-
-.carousel-indicators li {
-    background: #cecece;
-    bottom: -3.7em;
-    height: 0.8em;
-    width: 0.8em;
-    border-radius: 50%;
-}
-
-.carousel-indicators .active
-{
-    height: 1em;
-    bottom: -3.6em;
-    width: 1em;
-    border-radius: 50%;
-    background: #428bca !important;
-}
-
-article
-{
-    padding: 0.7em 0.7em 0.2em 0.7em;
-    margin-bottom: 1em;
-    border-radius: 3px;
-    border: 1px solid #DDD;
-}
-
-article:hover
-{
-    background: #eee;
-}
-
-figure img
-{
-    width: 100%;
-    height: 100%;
-}
-</style>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <?php include 'navigasi.php';?>
@@ -161,13 +97,14 @@ figure img
                 foreach($jumlah['artikel'] as $art)
                 {
                     $tag = explode(',',$art['tag']);
+                    $tgl = explode(' ',$art['tgl_post']);
                     $isi = batas($art['isi'], 50);
                     ?>
             <article>
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <figure>
-                            <img src="<?php echo base_url()?>data/artikel/<?php echo $art['gambar']?>">
+                            <img src="<?php echo base_url()?>data/artikel/<?php echo $art['gambar']?>" style="max-height: 220px">
                         </figure>
                     </div>
                     <div class="col-sm-6 col-md-8">
@@ -178,10 +115,10 @@ figure img
                         </h4>
                         <section>
                             <i class="fa fa-fw fa-calendar"></i>
-                            <?php echo $art['tgl_post']?>
+                            <?php echo tgl_indo($tgl[0], true).' '.$tgl[1]?>
                         </section>
                         <p>
-                            <?php echo str_replace('\n', ' ',$isi)?>
+                            <?php echo str_replace('\n', ' ',$isi)?>....
                         </p>
                     </div>
                 </div>

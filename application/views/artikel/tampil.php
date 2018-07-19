@@ -4,7 +4,7 @@ $tambah = $this->session->flashdata('url_tambah');
 $detail = $this->session->flashdata('url_detail');
 $ubah = $this->session->flashdata('url_ubah');
 $hapus = $this->session->flashdata('url_hapus');
-include 'lalu.php';
+include '/../lalu.php';
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ include 'lalu.php';
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-sm table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-sm table-bordered table-hover" id="artikel" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>#</th>
